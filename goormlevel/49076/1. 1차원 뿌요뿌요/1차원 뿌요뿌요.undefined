@@ -1,0 +1,36 @@
+# -*- coding: utf-8 -*-
+# UTF-8 encoding when using korean
+user_input = list(map(int, input().split()))
+result = input()
+count = 1
+next_result = 'next'
+str = result[:]
+
+while result != next_result:
+	result = str[:]
+	for i in range(len(result)-1):
+		if result[i] == result[i+1]:
+			count += 1
+			if (i+1 == len(result)-1) and (count >= user_input[1]):
+				if count == len(result):
+					next_result = ''
+					str = next_result[:]
+					break
+				else:
+					next_result = result[:len(result)-count]
+					result = next_result[:]
+		else:
+			if count >= user_input[1]:
+				next_result = result[:i-count+1] + result[i+1:]
+				str = next_result[:]
+				count = 1
+				break
+			else:
+				count = 1
+	if next_result == 'next':
+		next_result = result[:]
+
+if next_result == '':
+	print('CLEAR!')
+else:
+	print(next_result)
