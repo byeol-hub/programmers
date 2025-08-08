@@ -3,6 +3,7 @@ def solution(s):
     s_arr = []
     
     s_arr = s.split(' ')
+    print(s_arr)
     
     for i in s_arr:
         answer += ' '
