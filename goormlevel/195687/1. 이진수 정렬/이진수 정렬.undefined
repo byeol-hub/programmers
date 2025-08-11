@@ -1,0 +1,24 @@
+# -*- coding: utf-8 -*-
+# UTF-8 encoding when using korean
+# user_input = list(map(int, input().split()))
+# num = list(map(int, input().split()))
+# num_bin = []
+# dict = {}
+	
+# for i in range(user_input[0]):
+# 	num_bin.append(bin(num[i])[2:].count('1'))
+
+# for key, value in zip(num, num_bin):
+# 	dict[key] = value
+
+# sort_dict = sorted(dict.items(), key=lambda x:(x[1],x[0]))
+
+# print(sort_dict[-user_input[1]][0])
+
+user_input = list(map(int, input().split()))
+num = list(map(int, input().split()))
+
+num.sort(key=lambda x:(bin(x)[2:].count('1'), x))
+
+print(num[-user_input[1]])
+
