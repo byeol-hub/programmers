@@ -1,10 +1,36 @@
 def solution(numbers):
-    answer = 1
+    answer = 0
     
-    answer *= max(numbers)
+    numbers.sort(reverse=True)
     
-    numbers.remove(max(numbers))
-    
-    answer *= max(numbers)
+    answer = numbers[0]*numbers[1]
     
     return answer
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+# def solution(numbers):
+#     answer = 1
+    
+#     answer *= max(numbers)
+    
+#     numbers.remove(max(numbers))
+    
+#     answer *= max(numbers)
+    
+#     return answer
