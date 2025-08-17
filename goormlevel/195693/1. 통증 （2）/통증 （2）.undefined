@@ -1,0 +1,41 @@
+# -*- coding: utf-8 -*-
+# UTF-8 encoding when using korean
+user_input = int(input())
+item_list = list(map(int, input().split()))
+count = 0
+
+while user_input > 0:
+	if user_input % item_list[1] == 0:
+		count += user_input // item_list[1]
+		break
+	else:
+		user_input -= item_list[0]
+		count += 1
+
+if user_input < 0:
+	print(-1)
+else:
+	print(count)
+
+
+
+# while user_input > 0:
+# 	if user_input < item_list[1]:
+# 		if user_input < item_list[0]:
+# 			print(-1)
+# 			break
+# 		elif user_input == item_list[0]:
+# 			count += 1
+# 			print(count)
+# 			break
+# 		else:
+# 			user_input -= item_list[0]
+# 			count += 1
+# 	elif user_input == item_list[1]:
+# 		count += 1
+# 		print(count)
+# 		break
+# 	else:
+# 		user_input -= item_list[1]
+# 		count += 1
+		
