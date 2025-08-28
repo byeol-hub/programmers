@@ -1,0 +1,10 @@
+# -*- coding: utf-8 -*-
+# UTF-8 encoding when using korean
+import math
+
+user_input = int(input())
+
+if user_input == int(math.sqrt(user_input))**2:
+	print(int(math.isqrt(user_input)))
+else:
+	print(int(math.isqrt(user_input))+1)
