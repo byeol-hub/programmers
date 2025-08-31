@@ -1,3 +1,4 @@
+### 내 풀이
 def solution(number):
     answer = 0
     
@@ -10,3 +11,17 @@ def solution(number):
                     answer += 1
     
     return answer
+
+# ### 다른 사람 풀이
+# def solution(number):
+#     answer = 0
+    
+#     number.sort()
+    
+#     from itertools import combinations
+    
+#     for i in combinations(number, 3):
+#         if sum(i) == 0:
+#             answer += 1
+    
+#     return answer
